@@ -10,8 +10,8 @@ optimizer = HyperParameterOptimizer(
     base_task_id='11eafb1744f84f74909ed8b8f88f16c3',
     hyper_parameters=[
         DiscreteParameterRange('General/optimizer', ['adam', 'sgd']),
-        UniformIntegerParameterRange('General/hidden_dim', min_value=10, max_value=250),
-        UniformParameterRange('General/dropout', min_value=0, max_value=0.4)
+        UniformIntegerParameterRange('General/hidden_dim', min_value=10, max_value=15),
+        UniformParameterRange('General/dropout', min_value=0.2, max_value=0.3)
     ],
     objective_metric_title="epoch_accuracy",
     objective_metric_series='validation: epoch_accuracy',
